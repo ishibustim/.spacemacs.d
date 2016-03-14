@@ -41,6 +41,8 @@ values."
 
      ;; Custom config layers
      (keybindings)
+
+     ;; Game Layers
      (2048-game)
      )
    ;; List of additional packages that will be installed without being
