@@ -13,7 +13,10 @@ values."
    dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path
+   '(
+     "~/.spacemacs.d/private/"
+     )
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -35,6 +38,10 @@ values."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
+
+     ;; Custom config layers
+     (keybindings)
+     (2048-game)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -249,8 +256,9 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
-  (global-set-key (kbd "C-x b") 'ibuffer)
-  (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+  ;; Load custom keybindings
+  ;;(use-package "~/.spacemacs.d/keybindings.el")
+  ;;(defun keybindings/keybindings-init ())
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
