@@ -41,6 +41,7 @@ values."
 
      ;; Custom config layers
      (keybindings)
+     (sublimity)
 
      ;; Game Layers
      (2048-game)
@@ -265,6 +266,14 @@ you should place you code here."
 
   ;; disable scroll acceleration
   (setq mouse-wheel-progressive-speed nil)
+
+  ;; Sublimity options
+  ;; disable sublimity smooth scrolling
+  (setq sublimity-handle-scroll-criteria '(nil))
+  ;; refresh minimap faster
+  (sublimity-map-set-delay 1)
+  ;; enable sublimity
+  (sublimity-mode 1)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
